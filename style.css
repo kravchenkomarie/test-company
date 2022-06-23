@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
+p {
+  display: inline-block;
+}
+
+.header__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  filter: drop-shadow(0 0 0.75rem #E5E5E5);
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.header__logo {
+  width: 8.4rem;
+  height: 1.9rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.header__search > input {
+width: 100%;
+height: 2.4rem;
+background: url(img/ellipse.svg) no-repeat 1rem;
+padding-left: 3rem;
+background-size: 24px;
+cursor: pointer;
+}
+
+.header__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.header__profile:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 5rem;
+  background:  #EBEBF1;
+  right: 10rem;
+}
+
+.header__button-icon {
+  padding-right: 1rem;
+}
+
+.header__profile-name {
+  color: #768298;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.main {
+  width: 21rem;
+}
+
+.main__title {
+  text-transform: uppercase;
+  font-size: 28px;
+  padding: 5rem 1.2rem 1.9rem;
+  white-space: nowrap;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content__item {
+  width: 21rem;
+  height: 8.75rem;
+  border: 1px solid #EBEBF1;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.25rem;
+  cursor: pointer;
+}
+
+.content__item:hover {
+  box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+}
+
+/* Смартфон */
+
+@media screen and (min-width: 250px) and (max-width: 767px) {
+  .header__section {
+    flex-wrap: wrap;
+  }
+
+  .header__search {
+    order: 1;
+    width: 100%;
+    margin-top: .5rem;
+  }
+
+  .header__search input {
+    width: 100%;
+    border: none;
+  border-top: 1px solid #BBC4D6;
+  }
+
+  .header__profile {
+  display: none;
+  }
+}
+
+ /* Планшет */
+
+@media screen and (min-width: 768px) and (max-width: 1279px)  {
+   .header__section {
+    flex-wrap: wrap;
+    filter: drop-shadow(0 0 0.75rem #a1a1a1);
+  }
+.header__search {
+    width: 21.5rem;
+    /* margin-top: .5rem; */
+  }
+   .header__search input {
+    width: 100%;
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+  }
+  .header__button-icon {
+    display: none;
+  }
+}
+
+ /* Десктоп  */
+
+ @media screen and (min-width: 1280px) {
+    .header__section {
+    flex-wrap: wrap;
+  }
+
+.header__search {
+    width: 60rem;
+    /* margin-top: .5rem; */
+  }
+   .header__search input {
+    width: 100%;
+    border: 1px solid #EBEBF1;
+border-radius: 5px;
+  }
+ .header__button-icon {
+    display: none;
+  }
+  .main__title {
+    font-size: 36px;
+  }
+
+}
